@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="mybatis.mappers.noticeMapper">
+
+  <resultMap type="NoticeDto" id="noticeMap">
+    <id column="notice_id" property="noticeId"/>
+    <result column="title" property="title"/>
+    <result column="contents" property="contents"/>
+    <result column="modify_dt" property="modifyDt"/>
+    <result column="create_dt" property="createDt"/>
+    <result column="attach_count" property="attachCount"/>
+    <association javaType="UserDto" property="userDto">
+      <id column="user_id" property="userId"/>
+      <result column="user_pw" property="userPw"/>
+      <result column="user_email" property="userEmail"/>
+      <result column="user_name" property="userName"/>
+      <result column="profile_img" property="profileImg"/>
+      <result column="session_id" property="sessionId"/>
+      <result column="is_admin" property="isAdmin"/>
+      <result column="change_dt" property="changeDt"/>
+      <result column="created_dt" property="createdDt"/>
+    </association>
+  </resultMap>
+
+  <select id="selectNoticeList" parameterType="Map" resultMap="noticeMap">
+    SELECT n.notice_id, title, contents, modify_dt, create_dt, COUNT(attach_id) AS attach_count
+      FROM tbl_notice n LEFT JOIN tbl_attach a
+        ON n.notice_id = a.notice_id
+     GROUP BY n.notice_id, title, contents, modify_dt, create_dt
+     ORDER BY n.${column} ${sort}
+     LIMIT #{offset}, #{display}
+  </select>
+  
+  <select id="selectNoticeCount" resultType="int">
+    SELECT COUNT(*)
+      FROM tbl_notice
+  </select>
+  
+  <select id="selectNoticeById" parameterType="int" resultMap="noticeMap"> 
+    SELECT notice_id, title, contents, modify_dt, n.create_dt, user_email, user_name
+      FROM tbl_user u RIGHT JOIN tbl_notice n
+        ON u.user_id = n.user_id
+     WHERE notice_id = #{noticeId}
+  </select>
+  
+  <select id="selectAttachListByNoticeId" parameterType="int" resultType="AttachDto">
+    SELECT attach_id, notice_id, file_path, original_filename, filesystem_name, download_count
+      FROM tbl_attach
+     WHERE notice_id = #{noticeId}
+  </select>
+  
+  <select id="selectAttachById" parameterType="int" resultType="AttachDto">
+    SELECT attach_id, notice_id, file_path, original_filename, filesystem_name, download_count
+      FROM tbl_attach
+     WHERE attach_id = #{attachId}
+  </select>
+  
+  <insert id="insertNotice" parameterType="NoticeDto">
+    INSERT INTO tbl_notice
+    VALUES (null, #{userDto.userId}, #{title}, #{contents}, null, NOW())
+    <selectKey keyProperty="noticeId" resultType="int" order="AFTER">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+  </insert>
+  
+  <insert id="insertAttach" parameterType="AttachDto">
+    INSERT INTO tbl_attach
+    VALUES (null, #{noticeId}, #{filePath}, #{originalFilename}, #{filesystemName}, 0)
+  </insert>
+  
+  <delete id="deleteNotice" parameterType="int">
+    DELETE
+      FROM tbl_notice
+     WHERE notice_id = #{noticeId}
+  </delete>
+  
+  <delete id="deleteAttach" >
+    DELETE
+      FROM tbl_attach
+     WHERE attach_id IN (
+      <foreach collection="array" item="attachId" close=")" separator=",">
+        #{attachId}
+      </foreach>
+  </delete>
+  
+  <update id="updateAttachDownloadCount" parameterType="int">
+    UPDATE tbl_attach
+       SET download_count = download_count + 1
+     WHERE attach_id = #{attach_id}
+  </update>
+
+  <select id="selectSearchList" parameterType="Map" resultMap="noticeMap"> 
+    SELECT n.notice_id, title, contents, modify_dt, create_dt, COUNT(attach_id) AS attach_count
+      FROM tbl_notice n LEFT JOIN tbl_attach a
+        ON n.notice_id = a.notice_id
+    <where>
+      <if test="title != ''">title LIKE CONCAT('%', #{title}, '%')</if>
+      <if test="contents != ''">AND contents LIKE CONCAT('%', #{contents}, '%')</if>
+      <if test="beginDt != '' and endDt != ''">AND DATE(create_dt) BETWEEN  #{beginDt} AND #{endDt}</if>
+ 
+    </where>
+    GROUP BY n.notice_id, title, contents, modify_dt, create_dt
+    LIMIT #{offset}, #{display}
+  </select>
+    
+  <select id="selectSearchCount" parameterType="Map" resultType="int">
+    SELECT COUNT(*)
+      FROM tbl_notice
+    <where>
+      <if test="title != ''">title LIKE CONCAT('%', #{title}, '%')</if>
+      <if test="contents != ''">AND contents LIKE CONCAT('%', #{contents}, '%')</if>
+      <if test="beginDt != ''">AND create_dt >= #{beginDt}</if>
+      <if test="endDt != ''">AND create_dt <![CDATA[<=]]> #{endDt}</if>
+    </where>
+  </select>
+  
+  <update id="modifyNotice" parameterType="NoticeDto">
+    UPDATE tbl_notice
+       SET title = #{title}, contents = #{contents}, modify_dt = NOW()
+     WHERE notice_id = #{noticeId}
+  </update>
+  
+</mapper>

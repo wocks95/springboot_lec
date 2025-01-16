@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="mybatis.mappers.bbsMapper">
+  
+  <insert id="insertBbs" parameterType="BbsDto">
+    INSERT INTO tbl_bbs
+    VALUES (null, #{userId}, #{contents}, 0, 0, LAST_INSERT_ID() + 1, 0, null, NOW())
+  </insert>
+ 
+  <select id="selectBbsList" parameterType="Map" resultType="BbsDto">
+    SELECT bbs_id, b.user_id, contents, state, depth, group_id, group_order, modify_dt, created_dt, u.user_name
+      FROM tbl_bbs b INNER JOIN tbl_user u
+        ON b.user_id = u.user_id
+     ORDER BY group_id DESC, group_order ASC
+     LIMIT #{offset}, #{display}
+  </select>  
+  
+  <select id="selectBbsCount" resultType="int">
+    SELECT COUNT(*)
+      FROM tbl_bbs
+  </select>
+  
+  <update id="updateGroupOrder" parameterType="BbsDto">  <!-- 파라미터 BbsDto는 원글을 의미합니다. -->
+    UPDATE tbl_bbs
+       SET group_order = group_order + 1
+     WHERE group_id = #{groupId}        <!-- 같은 그룹의 게시글입니다. -->
+       AND group_order > #{groupOrder}  <!-- 원글의 group_order보다 큰 group_order를 가지는 게시글입니다. -->
+  </update>
+  
+  <insert id="insertBbsReply" parameterType="BbsDto">  <!-- 파라미터 BbsDto는 댓글을 의미합니다. -->
+    INSERT INTO tbl_bbs
+    VALUES (null, #{userId}, #{contents}, 0, #{depth}, #{groupId}, #{groupOrder}, null, NOW())    
+  </insert>
+  
+  <update id="deleteBbs" parameterType="int">
+    UPDATE tbl_bbs
+       SET state = 1
+     WHERE bbs_id = #{bbsId}
+  </update>
+  
+    <select id="selectSearchCount" parameterType="Map" resultType="int">
+    SELECT COUNT(*)
+      FROM tbl_bbs b INNER JOIN tbl_user u
+        ON b.user_id = u.user_id
+    <where>
+      <if test="contents != ''">contents LIKE CONCAT('%', #{contents}, '%')</if>
+      <if test="userName != ''">AND user_name LIKE CONCAT('%', #{userName}, '%')</if>
+      <if test="beginDt != ''">AND created_dt >= #{beginDt}</if>
+      <if test="endDt != ''">AND created_dt <![CDATA[<=]]> #{endDt}</if>
+    </where>  
+  </select>
+  
+  <select id="selectSearchList" parameterType="Map" resultType="BbsDto">
+    SELECT bbs_id, b.user_id, contents, state, depth, group_id, group_order, modify_dt, created_dt, u.user_name
+      FROM tbl_bbs b INNER JOIN tbl_user u
+        ON b.user_id = u.user_id
+    <where>
+      <if test="contents != ''">contents LIKE CONCAT('%', #{contents}, '%')</if>
+      <if test="userName != ''">AND user_name LIKE CONCAT('%', #{userName}, '%')</if>
+      <if test="beginDt != ''">AND created_dt >= #{beginDt}</if>
+      <if test="endDt != ''">AND created_dt <![CDATA[<=]]> #{endDt}</if>
+    </where>
+     ORDER BY group_id DESC, group_order ASC
+     LIMIT #{offset}, #{display}
+  </select>
+  
+  
+</mapper>

@@ -1,0 +1,52 @@
+package com.min.app01;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.min.app01.mapper.IBoardMapper;
+
+@SpringBootTest
+class ApplicationTests {
+
+  @Autowired
+  private IBoardMapper boardMapper;
+  
+  
+	@Test
+	void 매퍼_객체_생성_테스트() {
+	  Assertions.assertNotNull(boardMapper);
+	}
+	
+	@Test
+	void now_테스트() {
+	  System.out.println("NOW : " + boardMapper.now());
+	}
+	
+	@Test
+	void board_list_테스트() {
+	  Assertions.assertEquals(1, boardMapper.selectBoardList().size());
+	}
+
+	@Test
+	void board_detail_테스트() {
+	  Assertions.assertEquals("첫 번째 게시글", boardMapper.selectBoardById(1).getTitle());
+	}
+	
+	@Test
+	void board_insert_테스트() {
+	 String title="Test Title";
+	 String contents="Test Content";
+	 String createDt="2025-01-16";
+	 boardMapper.insertBoard(title,contents,createDt);
+	 assertNotNull(boardMapper);
+	}
+	
+	@Test
+	void board_update_테스트() {
+	  Assertions.assertEquals(1, boardMapper.updateBoard("수정제목", "수정내용", 1));
+	}
+}

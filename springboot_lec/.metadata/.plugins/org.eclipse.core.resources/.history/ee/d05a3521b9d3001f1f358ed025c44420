@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="mybatis.mappers.userMapper">
+  
+  <insert id="insertUser" parameterType="UserDto">
+    INSERT INTO tbl_user
+    VALUES (null, #{userPw}, #{userEmail}, #{userName}, null, null, 0, NOW(), NOW())
+  </insert>
+  
+  <select id="selectUserByMap" parameterType="Map" resultType="UserDto">
+    SELECT * 
+      FROM tbl_user
+    <where>
+      <if test="userEmail != null">user_email = #{userEmail}</if>
+      <if test="userPw != null">AND user_pw = #{userPw}</if>
+      <if test="userId != null">AND user_id = #{userId}</if>
+    </where>
+  </select>
+  
+  <update id="updateUserInfo" parameterType="UserDto">
+    UPDATE tbl_user
+      <set>
+        <if test="userEmail != ''">user_email = #{userEmail}</if>
+        <if test="userName != ''">, user_name = #{userName}</if>
+      </set>
+     WHERE user_id = #{userId}
+  </update>
+  
+  <update id="updateUserProfile" parameterType="UserDto">
+    UPDATE tbl_user
+       SET profile_img = #{profileImg}
+     WHERE user_id = #{userId}
+  </update>
+  
+  <update id="updateUserPassword" parameterType="UserDto">
+    UPDATE tbl_user
+       SET user_pw = #{userPw},
+           change_dt = NOW()
+     WHERE user_id = #{userId}
+  </update>
+  
+  <delete id="deleteUser" parameterType="int">
+    DELETE
+      FROM tbl_user
+     WHERE user_id = #{userId}
+  </delete>
+  
+  <insert id="insertLogin" parameterType="Map">
+    INSERT INTO tbl_login
+    VALUES (#{UserId}, NOW(), #{ip}, #{agent})
+  </insert>
+  
+  <select id="selectWithdrawalList" parameterType="Map" resultType="WithdrawalDto">
+    SELECT * 
+      FROM tbl_withdrawal
+     ORDER BY del_dt DESC
+     LIMIT #{offset}, #{display}          
+  </select>  
+  
+  <select id="selectWithdrawalCount" resultType="int">
+    SELECT COUNT(*)
+      FROM tbl_withdrawal
+     ORDER BY del_dt DESC
+  </select>
+    
+  <select id="selectLoginList" parameterType="Map" resultType="LoginDto">
+    SELECT l.user_id, u.user_email, u.user_name, acc_dt, acc_ip, user_agent
+      FROM tbl_login l INNER JOIN tbl_user u
+        ON l.user_id = u.user_id
+     ORDER BY acc_dt DESC
+     LIMIT #{offset}, #{display}     
+   </select>  
+
+  <select id="selectLoginCount" resultType="int">
+    SELECT COUNT(*)
+      FROM tbl_login l INNER JOIN tbl_user u
+        ON l.user_id = u.user_id
+  </select>
+        
+</mapper>

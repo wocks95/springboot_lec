@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ApplicationTests.board_update_테스트" project="01_board" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="com.min.app01.ApplicationTests" time="0.943" displayname="ApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.min.app01.ApplicationTests]">
+    <testcase name="board_update_테스트" classname="com.min.app01.ApplicationTests" time="0.943" displayname="board_update_테스트()" uniqueid="[engine:junit-jupiter]/[class:com.min.app01.ApplicationTests]/[method:board_update_테스트()]">
+      <error>org.mybatis.spring.MyBatisSystemException: &#13;
+### Error updating database.  Cause: org.apache.ibatis.binding.BindingException: Parameter 'boardId' not found. Available parameters are [contents, title, param3, createDt, param1, param2]&#13;
+### The error may exist in com/min/app01/mapper/IBoardMapper.java (best guess)&#13;
+### The error may involve com.min.app01.mapper.IBoardMapper.updateBoard-Inline&#13;
+### The error occurred while setting parameters&#13;
+### SQL: UPDATE tbl_board title, contents, create_dt WHERE board_id=?&#13;
+### Cause: org.apache.ibatis.binding.BindingException: Parameter 'boardId' not found. Available parameters are [contents, title, param3, createDt, param1, param2]&#13;
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:99)&#13;
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:347)&#13;
+	at jdk.proxy2/jdk.proxy2.$Proxy70.update(Unknown Source)&#13;
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:234)&#13;
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:67)&#13;
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)&#13;
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)&#13;
+	at jdk.proxy2/jdk.proxy2.$Proxy74.updateBoard(Unknown Source)&#13;
+	at com.min.app01.ApplicationTests.board_update_테스트(ApplicationTests.java:53)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+Caused by: org.apache.ibatis.binding.BindingException: Parameter 'boardId' not found. Available parameters are [contents, title, param3, createDt, param1, param2]&#13;
+	at org.apache.ibatis.binding.MapperMethod$ParamMap.get(MapperMethod.java:210)&#13;
+	at org.apache.ibatis.reflection.wrapper.MapWrapper.get(MapWrapper.java:46)&#13;
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:115)&#13;
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:82)&#13;
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:97)&#13;
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:65)&#13;
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:91)&#13;
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49)&#13;
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)&#13;
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)&#13;
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333)&#13;
+	... 10 more&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

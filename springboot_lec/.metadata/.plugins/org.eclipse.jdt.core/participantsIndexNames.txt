@@ -1,0 +1,3 @@
+INDEX VERSION 1.134
+D:\dev_lec\workspaces\springboot_lec\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3844557815.index
+\01_board\src\main\java

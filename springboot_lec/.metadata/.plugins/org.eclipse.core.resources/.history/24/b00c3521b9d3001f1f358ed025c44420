@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="mybatis.mappers.commentMapper">
+
+  <resultMap type="commentDto" id="commentMap">
+    <id column="comment_id" property="commentId"/>
+    <result column="blog_id" property="blogId"/>
+    <result column="contents" property="contents"/>
+    <result column="modify_dt" property="modifyDt"/>
+    <result column="create_dt" property="createDt"/>
+    <result column="state" property="state"/>
+    <result column="depth" property="depth"/>
+    <result column="group_id" property="groupId"/>
+    <result column="group_order" property="groupOrder"/>
+    <association javaType="UserDto" property="userDto">
+      <id column="user_id" property="userId"/>
+      <result column="user_email" property="userEmail"/>
+    </association>
+  </resultMap>
+  
+  <!-- 댓글 추가 -->
+  <insert id="insertComment" parameterType="CommentDto">
+    INSERT INTO tbl_comment
+    VALUES (null, #{userDto.userId}, #{blogId}, #{contents}, null, NOW(), 0, 0, LAST_INSERT_ID() + 1, 0)
+    <selectKey keyProperty="groupId" resultType="int" order="AFTER">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+  </insert>
+  
+  <!-- 기존 댓글 업데이트, 파라미터 commentDto : 원글 -->
+  <update id="updateGroupOrder" parameterType="CommentDto">
+    UPDATE tbl_comment
+       SET group_order = group_order + 1
+     WHERE group_id = #{groupId}  <!-- #{group_id} : 원글의 group_id와 현재의 group_id가 같다. (같은 그룹의 게시글입니다.) -->
+       AND group_order > #{groupOrder}  <!-- 원글의 #{group_order} 보다 현재의 group_order가 크다. -->
+  </update>
+  
+  <!-- 신규 대댓글 추가 -->
+  <insert id="insertCommentReply" parameterType="CommentDto">
+    INSERT INTO tbl_comment
+    VALUES (null, #{userDto.userId}, #{blogId}, #{contents}, null, NOW(), 0, #{depth}, #{groupId}, #{groupOrder})
+  </insert>
+  
+  <!-- 댓글 갯수 확인 -->
+  <select id="selectCommentCount" parameterType="int" resultType="int">
+    SELECT COUNT(*)
+      FROM tbl_comment
+     WHERE blog_id = #{blogId}
+  </select>
+  
+  <!-- 리스트 가져오기  -->
+  <select id="selectCommentList" parameterType="Map" resultMap="commentMap">
+    SELECT comment_id, u.user_id, u.user_email, b.blog_id, c.contents, c.modify_dt, c.create_dt, state, depth, group_id, group_order
+      FROM tbl_comment c
+     INNER JOIN tbl_user u ON c.user_id = u.user_id  <!-- tbl_user와 조인 -->
+     INNER JOIN tbl_blog b ON c.blog_id = b.blog_id  <!-- tbl_blog와 조인 -->
+     WHERE b.blog_id = #{blogId}  <!-- blogId 조건 -->
+     ORDER BY group_id DESC, group_order ASC
+     LIMIT #{offset}, #{display}  <!-- 페이징 처리 -->
+  </select>
+  
+  <!-- 댓글 삭제 (실제 삭제는 안하고, state 값만 1로 변경함) -->
+  <update id="deleteComment" parameterType="int">
+    UPDATE tbl_comment
+       SET state = 1
+     WHERE comment_id = #{commentId}
+  </update>
+  
+</mapper>
