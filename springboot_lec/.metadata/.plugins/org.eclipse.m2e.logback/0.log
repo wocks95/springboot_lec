@@ -2646,3 +2646,417 @@ org.eclipse.core.runtime.CoreException: Launch configuration ApplicationTests.bo
 	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
 	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:106)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-01-17 09:22:57,748 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-01-17 09:38:43,570 [Worker-9: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.min:app02:0.0.1-SNAPSHOT @ D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\pom.xml.
+2025-01-17 09:38:45,073 [Worker-9: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /02_mybatis_interface/src/main/java
+2025-01-17 09:38:45,074 [Worker-9: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /02_mybatis_interface/src/main/resources
+2025-01-17 09:38:45,078 [Worker-9: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /02_mybatis_interface/src/main/resources
+2025-01-17 09:38:45,082 [Worker-9: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /02_mybatis_interface/src/test/java
+2025-01-17 09:38:45,082 [Worker-9: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /02_mybatis_interface/src/test/resources
+2025-01-17 09:38:45,379 [Worker-9: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 3 sec
+2025-01-17 09:38:45,383 [Worker-9: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2025-01-17 09:38:45,811 [Worker-9: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.min:app02:0.0.1-SNAPSHOT @ D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\pom.xml.
+2025-01-17 09:38:46,583 [Worker-9: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /02_mybatis_interface/src/main/java
+2025-01-17 09:38:46,584 [Worker-9: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /02_mybatis_interface/src/main/resources
+2025-01-17 09:38:46,584 [Worker-9: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /02_mybatis_interface/src/main/resources
+2025-01-17 09:38:46,585 [Worker-9: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /02_mybatis_interface/src/test/java
+2025-01-17 09:38:46,585 [Worker-9: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /02_mybatis_interface/src/test/resources
+2025-01-17 09:38:47,011 [Worker-9: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 1.00 sec, update config takes 0.00 sec 
+2025-01-17 09:38:47,931 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 09:38:47,944 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 09:38:47,949 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 09:47:14,227 [Worker-15: Building Workspace] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 09:47:14,233 [Worker-15: Building Workspace] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2025-01-17 09:47:14,246 [Worker-15: Building Workspace] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 09:47:32,090 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 09:47:32,091 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 09:47:32,096 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 09:49:14,062 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 09:49:14,064 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 09:49:14,069 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 09:52:21,250 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 09:52:21,256 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 09:52:21,259 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 09:53:27,471 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 09:53:27,474 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 09:53:27,480 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 09:54:04,284 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 09:54:04,296 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 09:54:04,300 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 09:56:57,094 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 09:56:57,100 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 09:56:57,105 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 09:57:49,634 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 09:57:49,635 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 09:57:49,639 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 09:59:42,907 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 09:59:42,911 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 09:59:42,916 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 10:00:10,906 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 10:00:10,907 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 10:00:10,910 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 10:03:08,797 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 10:03:08,798 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 10:03:08,801 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 10:03:12,758 [main] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating MapperTests.now_테스트 from maven configuration
+2025-01-17 10:12:02,531 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 10:12:02,531 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 10:12:02,534 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 10:13:46,003 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 10:13:46,004 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 10:13:46,007 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 10:14:16,041 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 10:14:16,044 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 10:14:16,047 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 10:14:19,797 [main] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating MapperTests.board_list_테스트 from maven configuration
+2025-01-17 10:38:19,990 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 10:38:19,996 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 10:38:19,999 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 10:39:37,904 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 10:39:37,905 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 10:39:37,908 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 10:42:45,874 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 10:42:45,875 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 10:42:45,878 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 10:42:48,988 [main] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating MapperTests.board_insert_테스트 from maven configuration
+2025-01-17 10:44:04,479 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 10:44:04,484 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 10:44:04,487 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 10:45:22,048 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 10:45:22,050 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 10:45:22,056 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 10:46:50,595 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 10:46:50,596 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 10:46:50,598 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 10:46:53,148 [main] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating MapperTests.board_detail_테스트 from maven configuration
+2025-01-17 10:48:48,926 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 10:48:48,929 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 10:48:48,932 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 10:48:56,262 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 10:48:56,263 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 10:48:56,267 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 10:49:17,981 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 10:49:17,983 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 10:49:17,987 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 10:49:53,927 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 10:49:53,927 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 10:49:53,930 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 10:51:20,387 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 10:51:20,390 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 10:51:20,394 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 10:52:36,287 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 10:52:36,288 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 10:52:36,294 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 10:53:41,920 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 10:53:41,921 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 10:53:41,923 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 10:53:45,235 [main] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating MapperTests.board_update_테스트 from maven configuration
+2025-01-17 10:54:28,599 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 10:54:28,601 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 10:54:28,604 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 10:55:15,927 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 10:55:15,929 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 10:55:15,935 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 10:56:07,482 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 10:56:07,483 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 10:56:07,486 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 10:56:10,395 [main] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating MapperTests.board_delete_테스트 from maven configuration
+2025-01-17 11:00:47,928 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 11:00:47,929 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 11:00:47,934 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 11:01:31,642 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 11:01:31,643 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 11:01:31,645 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 11:01:50,929 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 11:01:50,930 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 11:01:50,932 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 11:02:39,216 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 11:02:39,217 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 11:02:39,220 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 11:03:05,685 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 11:03:05,687 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 11:03:05,692 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 11:05:09,982 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 11:05:09,984 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 11:05:09,989 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 11:32:39,177 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 11:32:39,187 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 11:32:39,191 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 11:36:35,487 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 11:36:35,506 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 11:36:35,511 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 11:37:45,931 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 11:37:45,933 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 11:37:45,936 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 11:42:34,310 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 11:42:34,313 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 11:42:34,315 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 11:47:36,112 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 11:47:36,117 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 11:47:36,119 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 12:21:10,771 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 12:21:10,776 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 12:21:10,779 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 12:21:28,862 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 12:21:28,872 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 12:21:28,875 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 12:34:20,488 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 12:34:20,496 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 12:34:20,499 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 12:35:21,031 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 12:35:21,048 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 12:35:21,053 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 12:38:27,464 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 12:38:27,467 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 12:38:27,470 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 12:38:43,409 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 12:38:43,412 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 12:38:43,415 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 12:39:45,447 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 12:39:45,448 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 12:39:45,451 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 12:39:49,203 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 12:39:49,205 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 12:39:49,207 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 12:47:58,023 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 12:47:58,024 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 12:47:58,027 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 12:49:17,989 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 12:49:17,990 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 12:49:17,992 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 12:49:47,959 [main] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating WebTests.mockMvc_객체_생성_테스트 from maven configuration
+2025-01-17 12:56:59,782 [main] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating WebTests.목록_보기_테스트 from maven configuration
+2025-01-17 12:57:01,484 [Worker-76: Launching WebTests.목록_보기_테스트] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 12:57:01,485 [Worker-76: Launching WebTests.목록_보기_테스트] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 12:57:01,487 [Worker-76: Launching WebTests.목록_보기_테스트] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 13:00:50,339 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 13:00:50,340 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 13:00:50,342 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 13:03:27,383 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 13:03:27,384 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 13:03:27,386 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 13:06:03,601 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 13:06:03,602 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 13:06:03,604 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 13:08:54,867 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 13:08:54,868 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 13:08:54,870 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 13:10:28,585 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 13:10:28,601 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 13:10:28,608 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 13:11:59,789 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 13:11:59,790 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 13:11:59,792 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 13:15:30,335 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 13:15:30,339 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 13:15:30,343 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 13:15:32,726 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 13:15:32,727 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 13:15:32,729 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 13:15:40,565 [main] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating WebTests.상세_보기_테스트 from maven configuration
+2025-01-17 13:16:28,631 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 13:16:28,632 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 13:16:28,634 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 13:18:39,950 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 13:18:39,954 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 13:18:39,957 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 14:21:57,972 [Worker-102: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 14:21:57,973 [Worker-102: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 14:21:57,976 [Worker-102: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 14:25:45,884 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 14:25:45,885 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 14:25:45,887 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 14:31:15,898 [main] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating WebTests.신규_등록_테스트 from maven configuration
+2025-01-17 14:31:17,636 [Worker-104: Launching WebTests.신규_등록_테스트] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 14:31:17,637 [Worker-104: Launching WebTests.신규_등록_테스트] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 14:31:17,641 [Worker-104: Launching WebTests.신규_등록_테스트] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 14:31:39,882 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 14:31:39,883 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 14:31:39,885 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 14:34:10,545 [Worker-109: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 14:34:10,546 [Worker-109: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 14:34:10,548 [Worker-109: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 14:36:05,114 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 14:36:05,114 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 14:36:05,116 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 14:43:54,428 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 14:43:54,429 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 14:43:54,431 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 14:44:07,043 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 14:44:07,043 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 14:44:07,045 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 14:44:48,776 [main] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating WebTests.수정_테스트 from maven configuration
+2025-01-17 14:44:50,481 [Worker-100: Launching WebTests.수정_테스트] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 14:44:50,482 [Worker-100: Launching WebTests.수정_테스트] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 14:44:50,484 [Worker-100: Launching WebTests.수정_테스트] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 14:45:10,444 [Worker-107: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 14:45:10,445 [Worker-107: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 14:45:10,447 [Worker-107: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 14:45:47,386 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 14:45:47,387 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 14:45:47,388 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 14:45:52,408 [main] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating WebTests.삭제_테스트 from maven configuration
+2025-01-17 15:30:25,447 [Worker-115: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 15:30:25,457 [Worker-115: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 15:30:25,460 [Worker-115: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 16:00:53,733 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 16:00:53,740 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 16:00:53,742 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 16:01:08,734 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 16:01:08,737 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 16:01:08,740 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 16:05:36,536 [Worker-117: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 16:05:36,539 [Worker-117: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 16:05:36,542 [Worker-117: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 16:06:03,331 [Worker-115: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 16:06:03,334 [Worker-115: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 16:06:03,337 [Worker-115: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 16:06:11,609 [Worker-118: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 16:06:11,613 [Worker-118: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 16:06:11,616 [Worker-118: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 16:19:36,330 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 16:19:36,331 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 16:19:36,333 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 16:49:51,089 [Worker-131: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.min:app02_1:0.0.1-SNAPSHOT @ D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\pom.xml.
+2025-01-17 16:49:51,646 [Worker-131: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /02_mybatis_interface-1/src/main/java
+2025-01-17 16:49:51,646 [Worker-131: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /02_mybatis_interface-1/src/main/resources
+2025-01-17 16:49:51,648 [Worker-131: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /02_mybatis_interface-1/src/main/resources
+2025-01-17 16:49:51,650 [Worker-131: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /02_mybatis_interface-1/src/test/java
+2025-01-17 16:49:51,651 [Worker-131: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /02_mybatis_interface-1/src/test/resources
+2025-01-17 16:49:51,832 [Worker-131: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 1 sec
+2025-01-17 16:49:51,834 [Worker-131: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2025-01-17 16:49:52,278 [Worker-131: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.min:app02_1:0.0.1-SNAPSHOT @ D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\pom.xml.
+2025-01-17 16:49:53,077 [Worker-131: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /02_mybatis_interface-1/src/main/java
+2025-01-17 16:49:53,078 [Worker-131: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /02_mybatis_interface-1/src/main/resources
+2025-01-17 16:49:53,078 [Worker-131: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /02_mybatis_interface-1/src/main/resources
+2025-01-17 16:49:53,078 [Worker-131: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /02_mybatis_interface-1/src/test/java
+2025-01-17 16:49:53,079 [Worker-131: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /02_mybatis_interface-1/src/test/resources
+2025-01-17 16:49:53,418 [Worker-131: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 1.00 sec, update config takes 0.00 sec 
+2025-01-17 16:49:53,755 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 16:49:53,768 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 16:49:53,772 [Worker-132: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 16:51:02,923 [Worker-131: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 16:51:02,923 [Worker-131: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 16:51:02,927 [Worker-131: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 16:51:38,067 [Worker-130: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 16:51:38,067 [Worker-130: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 16:51:38,070 [Worker-130: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 16:52:17,720 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 16:52:17,720 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 16:52:17,723 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 16:52:31,835 [Worker-131: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 16:52:31,835 [Worker-131: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 16:52:31,838 [Worker-131: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 16:53:02,568 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 16:53:02,569 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 16:53:02,571 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 16:53:34,922 [Worker-133: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 16:53:34,924 [Worker-133: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2025-01-17 16:53:34,931 [Worker-133: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 16:54:42,216 [Worker-130: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 16:54:42,218 [Worker-130: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 16:54:42,222 [Worker-130: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 16:59:38,413 [Worker-134: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 16:59:38,421 [Worker-134: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 16:59:38,425 [Worker-134: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:00:27,124 [Worker-133: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 17:00:27,128 [Worker-133: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 17:00:27,131 [Worker-133: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:12:50,892 [Worker-137: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 17:12:50,918 [Worker-137: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 17:12:50,920 [Worker-137: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:14:42,552 [Worker-143: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 17:14:42,575 [Worker-143: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 17:14:42,581 [Worker-143: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:18:14,283 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 17:18:14,287 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 17:18:14,290 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:19:47,314 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 17:19:47,317 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 17:19:47,319 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:20:00,841 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 17:20:00,843 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 17:20:00,846 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:20:44,633 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 17:20:44,637 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 17:20:44,640 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:21:54,675 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 17:21:54,676 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 17:21:54,682 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 17:22:05,707 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 17:22:05,708 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 17:22:05,713 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:22:46,178 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 17:22:46,181 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 17:22:46,185 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:24:21,666 [main] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating MapperTests.now_테스트 (1) from maven configuration
+2025-01-17 17:24:23,250 [Worker-141: Launching MapperTests.now_테스트 (1)] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 17:24:23,251 [Worker-141: Launching MapperTests.now_테스트 (1)] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 17:24:23,254 [Worker-141: Launching MapperTests.now_테스트 (1)] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:25:37,079 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 17:25:37,085 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 17:25:37,088 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:27:08,058 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 17:27:08,059 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 17:27:08,061 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:27:10,684 [main] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating MapperTests.board_list_테스트 (1) from maven configuration
+2025-01-17 17:28:26,649 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 17:28:26,652 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 17:28:26,655 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:29:47,565 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 17:29:47,566 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 17:29:47,570 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:29:51,233 [Worker-139: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 17:29:51,234 [Worker-139: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 17:29:51,238 [Worker-139: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:33:08,156 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 17:33:08,157 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 17:33:08,159 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:33:11,233 [main] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating MapperTests.board_detail_테스트 (1) from maven configuration
+2025-01-17 17:36:08,069 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 17:36:08,070 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 17:36:08,074 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:36:12,426 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 17:36:12,432 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 17:36:12,435 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:37:13,674 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 17:37:13,675 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 17:37:13,677 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:37:24,617 [Worker-139: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 17:37:24,618 [Worker-139: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 17:37:24,620 [Worker-139: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:38:04,784 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 17:38:04,787 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 17:38:04,789 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:39:16,925 [Worker-143: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 17:39:16,927 [Worker-143: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 17:39:16,934 [Worker-143: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:40:48,553 [main] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating MapperTests.board_update_테스트 (1) from maven configuration
+2025-01-17 17:40:50,153 [Worker-139: Launching MapperTests.board_update_테스트 (1)] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 17:40:50,154 [Worker-139: Launching MapperTests.board_update_테스트 (1)] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 17:40:50,156 [Worker-139: Launching MapperTests.board_update_테스트 (1)] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:41:39,334 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 17:41:39,338 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 17:41:39,340 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:42:33,957 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 17:42:33,959 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 17:42:33,963 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface\src\test\resources
+2025-01-17 17:42:39,390 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 17:42:39,391 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 17:42:39,395 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:43:34,338 [main] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating MapperTests.board_delete_테스트 (1) from maven configuration
+2025-01-17 17:43:35,933 [Worker-139: Launching MapperTests.board_delete_테스트 (1)] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 17:43:35,934 [Worker-139: Launching MapperTests.board_delete_테스트 (1)] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-17 17:43:35,936 [Worker-139: Launching MapperTests.board_delete_테스트 (1)] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:45:50,880 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 17:45:50,884 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 17:45:50,887 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:47:44,064 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 17:47:44,066 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 17:47:44,068 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:48:17,357 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 17:48:17,372 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 17:48:17,377 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources
+2025-01-17 17:52:36,565 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-17 17:52:36,584 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-01-17 17:52:36,589 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\dev_lec\workspaces\springboot_lec\02_mybatis_interface-1\src\test\resources

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+  <div th:text="|${board.boardId}번 게시글|"></div>
+  <div th:text="|작성일시 ${#dates.format(board.createDt, 'yyyy.MM.dd a hh:mm:ss')}|"></div>
+  <div th:text="|제목 ${board.title}|"></div>
+  <pre th:text="|내용 ${board.contents}|"></pre>
+  
+  <div>
+    <button type="button" id="btn-edit">편집</button>
+  </div>
+  
+  <!--/* th:inline="javascript" : 타임리프의 자바스크립트 인라인 문법 사용 */-->
+  <!--/* 자바 스크립트에서 자바 변수 처리를 위한 텍스트 랜더링 : [[${}]] */-->
+  <!--/* JavaScript Natural Template : /*[[${}]]*/ 디폴트값 */-->
+  
+  <script th:inline="javascript">
+  
+    function btnEaitClickHandler() {
+      document.getElementById('btn-edit').addEventListener('click', (event) => {
+        const boardId = /* [[${board.boardId}]] */0;  // ${board.boardId} 값이 있으면 사용하고 값이 없으면 0을 사용합니다.
+        location.href= '/edit.do?boardId=' + boardId;
+      })
+    }
+    
+    function msgHandle() {
+      const msg = /*[[${msg}]]*/ null;
+      if(msg !=null)
+        alert(msg);       
+     }
+    
+    btnEaitClickHandler();
+    msgHandle();
+  </script>
+  
+</body>
+</html>
