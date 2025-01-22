@@ -65,13 +65,33 @@ public class BoardServiceImpl implements IBoardService {
   }
 
   @Override
-  public String registBoard(BoardDto boardDto) {
-    return boardMapper.insertBoard(boardDto) == 1 ? "등록 성공" : "등록 실패";
+  public Map<String, String> registBoard(BoardDto boardDto) {
+    String mapping = null;
+    String msg = null;
+    try {
+      boardMapper.insertBoard(boardDto);
+      mapping = "/list.do";
+      msg = "등록 성공";
+    } catch (Exception e) {
+      mapping = "/write.do";
+      msg = "서버 오류 발생";
+    }
+    return Map.of("mapping", mapping, "msg", msg);
   }
 
   @Override
   public String modifyBoard(BoardDto boardDto) {
-    return boardMapper.updateBoard(boardDto) == 1 ? "수정 성공" : "수정 실패";
+    try {
+      int result = boardMapper.updateBoard(boardDto);
+      if(result == 1) {
+        return "게시글 수정 성공";
+      } else {
+        return "게시글 수정 실패. 다시 시도해 주세요.";
+      }
+    } catch (Exception e) {
+      
+      return "알 수 없는 오류가 발생하여 다시 시도해주시길 바랍니다.";
+    }
   }
 
   @Override

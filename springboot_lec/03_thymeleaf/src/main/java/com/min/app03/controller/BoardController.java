@@ -52,8 +52,9 @@ public class BoardController {
    
    @PostMapping("/regist.do")
    public String regist(BoardDto boardDto, RedirectAttributes redirectAttributes) {
-     redirectAttributes.addFlashAttribute("msg", boardService.registBoard(boardDto));
-     return "redirect:/list.do";
+     Map<String, String> map = boardService.registBoard(boardDto);
+     redirectAttributes.addFlashAttribute("msg", map.get("msg"));
+     return "redirect:" + map.get("mapping");
    }
    
    @GetMapping("/edit.do")

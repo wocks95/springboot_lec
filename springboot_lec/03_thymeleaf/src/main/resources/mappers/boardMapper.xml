@@ -22,7 +22,7 @@
   </select>
   
   <insert id="insertBoard">
-    INSET INTO tbl_board(
+    INSERT INTO tbl_board(
           title
         , contents
         , create_dt 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>write</title>
+</head>
+<body>
+  
+  <form th:action="@{/regist.do}" method="post" id="form-write">
+    <label for="title">제목</label>
+    <input type="text" id="title" name="title">
+    <br/>
+    <label for="contents">내용</label>
+    <textarea id="contents" name="contents"></textarea>
+    <br/>
+    <button type="submit">등록</button>
+  </form>
+  
+  
+  <script th:inline="javascript">
+  function submitForm() {
+    const formWrite = document.getElementById('form-write');
+    const title = document.getElementById('title');
+    const contents = document.getElementById('contents');
+    formWrite.addEventListener('submit', (event) => {
+      if(title.value === '') {
+        alert('제목은 필수입니다.');
+        title.focus();
+        event.preventDefault();
+        return;
+      }
+      if(contents.value === '') {
+        alert('내용을 작성해주세요.');
+        contents.focus();
+        event.preventDefault();
+        return;
+      } 
+    })
+  }
+  function msgHandle() {
+    const msg = /*[[${msg}]]*/ null;
+    if(msg !=null)
+      alert(msg);
+     
+   }
+  
+   msgHandle();
+  submitForm();
+  </script>
+</body>
+</html>

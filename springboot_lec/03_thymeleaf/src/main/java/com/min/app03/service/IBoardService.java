@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServletRequest;
 public interface IBoardService {
   Map<String, Object> getBoardList(HttpServletRequest request);
   BoardDto getBoardById(int boardId);
-  String registBoard(BoardDto boardDto);
+  Map<String, String> registBoard(BoardDto boardDto);
   String modifyBoard(BoardDto boardDto);
   String removeBoard(int boardId);
 }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>edit</title>
+</head>
+<body>
+  
+  <form th:action="@{/modify.do}" method="post" th:object="${board}">
+    <input type="hidden" name="boardId" th:field="*{boardId}">
+    <label for="title">제목</label>
+    <input type="text" id="title" name="title" th:field="*{title}">
+    <br/>
+    <label for="contents">내용</label>
+    <textarea id="contents" name="contents" th:text="*{contents}"></textarea>
+    <br/>
+    <button type="submit">수정</button>
+  </form>
+  
+  <script th:inline="javascript">
+    function msgHandle() {
+      const msg = /*[[${msg}]]*/ null;
+      if(msg !=null)
+        alert(msg);       
+     }
+     
+    
+    msgHandle();
+  </script>
+  
+  
+</body>
+</html>
