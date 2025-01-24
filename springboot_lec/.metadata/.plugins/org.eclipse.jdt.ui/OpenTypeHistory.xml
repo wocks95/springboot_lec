@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-    <typeInfo handle="=03_thymeleaf/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.min.app03.service{IBoardService.java[IBoardService" modifiers="513" timestamp="1737448840903"/>
-    <typeInfo handle="=03_thymeleaf/C:\/Users\/Administrator\/.m2\/repository\/org\/springframework\/spring-webmvc\/6.1.16\/spring-webmvc-6.1.16.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework=/=/maven.artifactId=/spring-webmvc=/=/maven.version=/6.1.16=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.web.servlet.config.annotation(WebMvcConfigurer.class[WebMvcConfigurer" modifiers="1537" timestamp="1736992827715"/>
+    <typeInfo handle="=05_rest_api/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.min.app05.service{IUserService.java[IUserService" modifiers="513" timestamp="1737695815184"/>
 </typeInfoHistroy>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- axios 라이브러리 사용을 위한 CDN -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+  <div>
+    <label for="email">이메일</label>
+    <input type="text" id="email" placeholder="example@example.com">
+    <button type="button" id="btn-sendcode">인증코드전송</button>
+  </div>
+  
+  
+  
+  
+  <script>
+    function sendCode() {
+      axios.get('/user/sendcode', {
+        params: {
+          email: document.getElementById('email').value // 이메일 받을 사람입니다.
+        }
+      }).then(response => {
+        console.log(response.data); // {"code", "123asb"}
+      }).catch(error => {
+        console.error('Error', error.response ? error.response.data : error.message);
+      })
+    } 
+    document.getElementById('btn-sendcode').addEventListener('click', sendCode); 
+  </script>
+
+
+</body>
+</html>

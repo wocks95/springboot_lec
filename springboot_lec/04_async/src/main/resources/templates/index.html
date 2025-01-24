@@ -27,6 +27,14 @@
     
   }
    async function getBoardList() {
+         
+       // fetch(promise) 방식 
+       /* fetch('요청')
+         .then(response => response.json())
+         .then(jsonData => {
+           console.log(jsonData);
+         }) */
+     
        const response = await fetch('/board/list.json?page=' + page + queryString);
        const jsonData = await response.json();
        console.log(jsonData);

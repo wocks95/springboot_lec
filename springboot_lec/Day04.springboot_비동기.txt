@@ -28,3 +28,11 @@ Day04.springboot_async(비동기)
 4. 댓글 작업 : 추가/삭제/목록/좋아요
 ----------------------------
 비동기 CRUD (01-27(월)예정) / 기능 
+
+
+2025.01.23
+*ResponseEntity란?
+ 
+ 
+ 사용자의 HtppRequest에 대한 응답 데이터를 포함하는 클래스이다. 따라서 HtppStatus, HttpHeaders,
+ HttpBody를 포함한다.
