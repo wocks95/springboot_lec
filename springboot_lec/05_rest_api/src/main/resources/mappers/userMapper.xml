@@ -5,23 +5,23 @@
   
   <insert id="insertUser" useGeneratedKeys="true" keyProperty="userId">
     INSERT INTO tbl_user (
-       email
-     , pwd
-     , nickname
-     , create_dt
+        email
+      , pwd
+      , nickname
+      , create_dt
     ) VALUES (
-       #{email}
-     , #{pwd}
-     , #{nickname}
-     , #{createDt}
-    ) 
+        #{email}
+      , #{pwd}
+      , #{nickname}
+      , NOW()
+    )
   </insert>
   
   <update id="updateUser">
     UPDATE tbl_user
        SET pwd = #{pwd}
          , nickname = #{nickname}
-     WHERE user_id = #{userId} 
+     WHERE user_id = #{userId}
   </update>
   
   <delete id="deleteUser">
@@ -47,4 +47,5 @@
       FROM tbl_user
      WHERE user_id = #{userId}
   </select>
+  
 </mapper>
