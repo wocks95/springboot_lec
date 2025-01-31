@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
     <typeInfo handle="=05_rest_api/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.min.app05.service{IUserService.java[IUserService" modifiers="513" timestamp="1737955832603"/>
+    <typeInfo handle="=06_rest_thymeleaf/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.min.app06.service{IMemberService.java[IMemberService" modifiers="513" timestamp="1738291561561"/>
 </typeInfoHistroy>
