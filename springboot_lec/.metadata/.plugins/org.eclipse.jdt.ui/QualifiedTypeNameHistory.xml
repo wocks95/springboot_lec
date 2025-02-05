@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
-    <fullyQualifiedTypeName name="io.swagger.v3.oas.models.info.Info"/>
-    <fullyQualifiedTypeName name="io.swagger.v3.oas.models.OpenAPI"/>
     <fullyQualifiedTypeName name="io.swagger.v3.oas.models.Components"/>
     <fullyQualifiedTypeName name="jakarta.validation.ConstraintViolationException"/>
     <fullyQualifiedTypeName name="org.springframework.web.method.annotation.MethodArgumentTypeMismatchException"/>
@@ -60,4 +57,7 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
     <fullyQualifiedTypeName name="com.min.app06.model.ResponseMessage"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.min.memberapp.mapper.IMemberMapper"/>
+    <fullyQualifiedTypeName name="org.assertj.core.api.Assertions"/>
 </qualifiedTypeNameHistroy>

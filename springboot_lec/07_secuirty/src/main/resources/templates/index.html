@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+  
+  <!-- 로그인을 하지 않은 사용자들이 볼 수 있습니다. = isAnonymous() -->
+  <div sec:authorize="isAnonymous()">
+    <a th:href="@{/user/signup}">회원가입</a>
+    <a th:href="@{/auth/login}">로그인</a>
+  </div>
+  
+  <!-- 인증 받은 사용자(로그인 한 사용자)들이 볼 수 있습니다. -->
+  <div sec:authorize="isAuthenticated()">
+    <span sec:authentication="name"></span>님 반갑습니다.
+    <form action="/auth/logout"> <!-- 이 요청은 th:action 요청으로 하지 않습니다. 이 요청은 SecurityConfig가 받습니다. -->
+      <button type="submit">로그아웃</button>
+    </form>
+  </div>
+  
+  <!-- user_role 이 "ADMIN"인 사용자들이 볼 수 있습니다. -->
+  <div sec:authorize="hasAnyAuthority('ADMIN')">
+    <div>Welcome ADMIN</div>
+    <a th:href="@{/admin/page}">관리자페이지</a>
+  </div>
+  
+  <!-- user_role 이 "USER"인 사용자들이 볼 수 있습니다. -->
+  <div sec:authorize="hasAnyAuthority('USER')">
+    <div>Welcome USER</div>
+  </div>
+  
+  
+  
+</body>
+</html>
