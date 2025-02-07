@@ -42,7 +42,7 @@ public class Menu {
    * 매핑된 테이블의 기본키가 생성되는 방식에 따라서 strategy 속성을 지정할 수 있습니다.
    * MYSQL의 AUTO_INCREMENT와 같다고 볼 수 있다.
    */
-  // @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   /*
    * @Column
    * JPA 에서 해당 필드가 테이블의 칼럼임을 명시하는 Annotation 입니다.
