@@ -75,3 +75,7 @@ Group function
      menuList.forEach(row -> {
       System.out.println( Arrays.toString(row));
      });
+
+서브쿼리
+
+동적쿼리
