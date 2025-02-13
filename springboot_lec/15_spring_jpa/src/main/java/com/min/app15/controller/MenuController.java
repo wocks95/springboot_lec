@@ -4,7 +4,9 @@ import java.util.Map;
 
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.min.app15.model.dto.MenuDto;
+import com.min.app15.model.exception.MenuNotFoundException;
+import com.min.app15.model.message.ResponseErrorMessage;
 import com.min.app15.model.message.ResponseMessage;
 import com.min.app15.service.MenuService;
 
@@ -21,8 +25,19 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequiredArgsConstructor
 public class MenuController {
-
+  
   private final MenuService menuService;
+  
+  @GetMapping(value = "/categories", produces = "application/json")
+  public ResponseMessage findCategoryList() {
+     
+    return ResponseMessage.builder()
+                    .status(200)
+                    .message("카테고리 목록 조회 성공")
+                    .results(Map.of("categories", menuService.findByCategoryList()))
+                    .build();
+  }
+  
   
   @PostMapping(value = "/menu", produces = "application/json")
   public ResponseMessage regist(@RequestBody MenuDto menuDto) {
@@ -37,8 +52,8 @@ public class MenuController {
   @PutMapping(value = "/menu/{menuCode}", produces = "application/json")
   public ResponseMessage modify(
       @PathVariable(name = "menuCode") Integer menuCode
-    , @RequestBody MenuDto menuDto) {
-    
+    , @RequestBody MenuDto menuDto) throws MenuNotFoundException {
+    //여기서 던진 예외는 ExceptionHandler가 받아서 메시지를 확인해줍니다.
     menuDto.setMenuCode(menuCode);
     
     return ResponseMessage.builder()
@@ -49,8 +64,8 @@ public class MenuController {
   }
   
   @DeleteMapping(value = "/menu/{menuCode}", produces = "application/json")
-  public ResponseMessage remove(@PathVariable(name = "menuCode") Integer menuCode) {
-    
+  public ResponseMessage remove(@PathVariable(name = "menuCode") Integer menuCode) throws MenuNotFoundException {
+    //여기서 던진 예외는 ExceptionHandler가 받아서 메시지를 확인해줍니다.
     menuService.deleteMenu(menuCode);
     
     return ResponseMessage.builder()
