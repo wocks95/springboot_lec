@@ -6,6 +6,8 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="D:\dev_lec\workpaces\springboot_lec"/>
+			<item value="D:\dev_lec\backend"/>
 			<item value="D:\dev_lec\teacher_workspaces\react_crud_app"/>
 			<item value="D:\dev_lec\workspaces\cicd_lec\cicd_member"/>
 		</list>
