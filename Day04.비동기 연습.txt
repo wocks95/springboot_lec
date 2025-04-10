@@ -1,0 +1,126 @@
+Day04 비동기 연습
+
+-index.html
+<div>
+  <button type="button" id="btn-list">JSON목록</button>
+  <button type="button" id="btn-list2">XML목록</button>
+</div>
+
+<div id="board-list"></div>
+
+
+<script th:inline="javascript">
+  var page = 1;
+  var queryString = '';
+
+  function fnPaging(p, qs) {
+  page = p;
+  queryString = qs;
+  getBoardList();
+  }
+  
+  async function getBoardList() {
+    const response = await fetch('/board/list.json?page=' + page  + queryString);
+    const jsonData = await response.json();
+    console.log(jsonData);
+
+    document.getElementById('board-list').innerHTML = '';
+
+    let str = '<div style="display: flex;">';
+    jsonData.boardList.board.forEach((b, index) => {
+      str += '<ul style="width: 100px; margin-right: 10px; border: 1px solid gray;">';
+      str += `  <li>게시글번호: ${b.boardId}</li>`;
+      str += `  <li>제목: ${b.title}</li>`;
+      str += `  <li>작성일시: ${b.createDt}</li>`;
+      str += '</ul>';
+    })
+    str += '</div>';
+    str += jsonData.paging;
+
+    document.getElementById('board-list').innerHTML = str;
+  }
+  async function getBoardListXml() {
+    const response = await fetch('/board/list.xml');
+    const xmlData = await response.text(); 
+    const xmlDocument = new DOMParser().parseFromString(XmlData, 'application/xml');
+    console.log(xmlDocument);
+
+    let str = '<div style="display: flex;">';
+    xmlDocument.querySelectorAll('board').forEach((b, index) => {
+      str +='<ul style="width: 100px; margin-right: 10px; border: 1px solid gray;">';
+      str +=`  <li>게시글번호: ${b.querySelector('boardId).textContent}</li>`;
+      str +=`   <li>제목: ${b.querySelector('title').textContent}</li>`; 
+      str +=`   <li>내용: ${b.querySelector('contents').textContent}</li>`;
+      str +=`   <li>작성일시: ${b.querySelector('createDt').textContent}</li>`;
+      str +='</ul>';
+    })
+    str += '</div>';
+    str += xmlDociment.querySelector('paging').textContent;
+
+    document.getElementById('board-list').innerHTML = str;
+  }
+
+      document.getElementById('btn-list').addEventListener('click', getboardList);
+      document.getElementById('btn-list2').addEventListener('click', getBoardListXml);
+  
+</script> 
+
+-AsyncController1
+@GetMapping(value={"/board/list", "/board/list.json"}
+          , produces-MediaType.APPLICATION_JSON_VALUE)
+
+@ResponseBody
+public Map<String, Object> list(HttpServletRequest request) {
+  return boardService.getBoardList(request);
+}
+
+@PostMapping(value="/board/regist"
+           , produces=MediaType.APPLICATION_JSON_VALUE)
+@ResponseBody
+public Map<String, Object> regist(BoardDto boardDto) {
+  return boardService.registBoard(boardDto);
+}
+-----------------------------------------------------------------------
+-index.html
+<form id="form-regist">
+  <label for="title">제목</label>
+  <input type="text" id="title" name="title">
+  <br/>
+  <label for="contents">내용</label>
+  <textarea id="contents" name="contents"></textarea>
+  <br/>
+  <button type="button" id="btn-regist">등록</button>
+
+
+<script>
+  async function registBoard() {
+    const form = document.getElementById('form-regist');  
+    const option = {
+      method: 'POST',
+      body: new FormData(form)
+    
+    }
+    const response = await fetch('/board/regist', option);
+    const jsonData = await response.json();    
+    console.log(jsonData);
+    alert(jsonData.msg);
+    if(jsonData.status === 200)
+       getBoardList();
+
+  }
+  document.getElementById('btn-regist').addEventListener('click', registBoard);
+</script>
+
+-AsyncController1
+@PostMapping(value="/board/regist"
+           , produces=MediaType.APPLICATION_JSON_VALUE)
+@ResponseBody
+public Map<String, Object> regist(BoardDto boardDto) {
+  return boardService.registBoard(boardDto);
+}
+
+
+
+
+
+

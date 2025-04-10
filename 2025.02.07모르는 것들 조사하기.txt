@@ -1,0 +1,33 @@
+@Transient
+- 데이터베이스와 상관없이 개발자가 필요에 의해 메모리에서만 사용하고 싶은 필드를
+  지정하고 싶을때 사용한다. 데이터베이스에 저장, 조회 되지 않는다.
+- 칼럼을 제외하기 위해 사용함(정확히는 영속 대상에서 제외한다.)
+
+
+@Temporal
+-날짜타입을 매핑할때 사용
+ 1) TemporalType.DATE : 날짜, 데이터베이스의 date타입과 매핑
+ 2) TemporalType.TIME : 시간, 데이터베이스의 time타입과 매핑
+ 3) TemporalType.TIMESTAMP : 날짜와 시간, 데이터베이스의 timestamp타입과 매핑 
+
+@GeneratedValue
+- 식별자로 사용할 필드 위에 @Id을 붙여 테이블의 PRIMARY KEY와 연결 시켜주고 사용해야한다.
+- 식별자 값을 자동 생성 시켜줄 수 있다.
+
+@TableGenerator
+
+@Enumerated*
+-자바의 enum타입을 매핑할 때 사용한다.
+ 1)EnumType.ORDINAL : enum 순서를 데이터베이스에 저장 (디폴트 값)
+  ※주의사항 : 사용하지말것. 데이터베이스에 enum의 순서가 저장되어 의미없는 데이터가 저장됨
+	      사용하려면 EnumType.STRING으로 사용을 권장
+ 2)EnumType.STRING : enum 이름을 데이터베이스에 저장 
+
+
+columnDefinition
+-@Column을 사용하면 가능
+-직접 해당 칼럼의 DDL 을 작성합니다.
+
+nullable
+
+unique

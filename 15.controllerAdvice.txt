@@ -1,0 +1,25 @@
+@ControllerAdvice
+- 모든 @Controller 즉, 전역에서 발생할 수 있는 예외를 잡아 처리해주는 Annotation이다.
+- 코드의 중복을 해결 가능
+- 하나의 클래스 내에서 정상 동작 시 호출되는 코드와 예외를 처리하는 코드를 분리할 수 있습니다.
+
+@ExceptionHanmdler
+- value로 원하는 예외를 지정하고 이를 핸들링 할 수 있다.
+- 예외에 대한 세부적인 정보 또한 응답으로 전달할 수 있다.
+
+
+
+@controllerAdvice 어노테이션을 통해 예외를 핸들링하는 클래스를 구현
+-------------------------------------------------------------------
+@ControllerAdvice
+public class SimpleControllerAdvice {
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<String> IllegalArgumentException() {
+        return ResponseEntity.badRequest().build();
+    }
+}
+-------------------------------------------------------------------
+@Transactional
+- 선언적 데이터베이스 트랜잭션 관리 방법을 제공합니다. 메서도 레벨 또는 클래스 레벨에서 사용가능!!
+https://medium.com/gdgsongdo/transactional-%EB%B0%94%EB%A5%B4%EA%B2%8C-%EC%95%8C%EA%B3%A0-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-7b0105eb5ed6

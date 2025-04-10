@@ -1,0 +1,23 @@
+
+*Controller.class(API 관련 설명적어주는 방법)
+
+- 해당되는 ErrorMessage 클래스를 만들어서 사용하는 방식
+@ApiResponse(responseCode = "00", description = "중복된 이메일을 이용한 회원 등록 시도", content = @Content(schema = @Schema(implementation = ResponseErrorMessage.class)))
+
+- 직접 입력하는 방식
+ @ApiResponse(responseCode = "01", description = "필수 입력값이 누락", content = @Content(schema = @Schema(example = """
+        {
+          "code":"01",
+          "error":"필수 입력 값 누락 또는 공백",
+          "description": "필수 입력값이 누락되거나 공백입니다."
+        }
+        """)))""
+
+Swagger 문서화 작업
+ 1. swagger에서 작업한 Spring Boot REST API의 바로 아래에 '/v3/api-docs'를 클릭
+ 2. 오른쪽 마우스를 눌러서 '다른 이름으로 저장'클릭하여 원하는 폴더나 바탕화면에 저장하기
+ 3. 새로운 웹페이지를 열어서 'editor.swagger.io'에 접속 
+ 4. 왼쪽 상단에 'File > Import file > 방금 전 저장한 파일 찾아서 열기'
+ 5. 상단에 'Generate Client > html2' 눌러서 다운로드 받기
+ 6. 다운로드 받은 알집을 '알아서 풀기' 하고 해당 폴더 안 '~.html'이 문서화된 파일이 나오는데 
+    문서화된 파일입니다.

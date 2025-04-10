@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+  
+  <div>
+    <button type="button" id="btn-list">JSON목록가져오기</button>
+    <button type="button" id="btn-list2">XML목록가져오기</button>
+  </div>
+  
+  <div id="board-list" style="width: 100px;"></div>
+  
+  <script th:inline="javascript">
+    
+  // 전역 변수 (모든 함수에서 사용할 수 있는 변수)
+  var page = 1;
+  var queryString = '';
+  
+  // fnPaging 함수는 PageUtil.java의 getAsyncPaging() 메소드에서 호출합니다.
+  function fnPaging(p, qs) {
+   page = p;
+   queryString = qs;
+   getBoardList();
+    
+  }
+   async function getBoardList() {
+         
+       // fetch(promise) 방식 
+       /* fetch('요청')
+         .then(response => response.json())
+         .then(jsonData => {
+           console.log(jsonData);
+         }) */
+     
+       const response = await fetch('/board/list.json?page=' + page + queryString);
+       const jsonData = await response.json();
+       console.log(jsonData);
+       
+       document.getElementById('board-list').innerHTML = '';
+       
+       let str = '<div style="display: flex;">';
+       jsonData.boardList.board.forEach((b, index) => {
+         str += '<ul style="width: 100px; margin-right: 10px; border: 1px solid gray;">';
+         str += `  <li>게시글번호: ${b.boardId}</li>`;
+         str += `  <li>제목: ${b.title}</li>`;
+         str += `  <li>작성일시: ${b.createDt}</li>`;
+         str += '</ul>';         
+       })
+       str += '</div>';
+       str += jsonData.paging;
+       
+       document.getElementById('board-list').innerHTML = str;
+    }
+       
+   async function getBoardListXml() {
+     const response = await fetch('/board/list.xml');
+     const xmlData = await response.text();
+     const xmlDocument = new DOMParser().parseFromString(xmlData, 'application/xml');
+     console.log(xmlDocument);
+     
+     let str = '<div style="display: flex;">';
+     xmlDocument.querySelectorAll('board').forEach((b, index) => {
+       str += '<ul style="width: 100px; margin-right: 10px; border: 1px solid gray;">';
+       str += `  <li>게시글번호: ${b.querySelector('boardId').textContent}</li>`;
+       str += `  <li>제목: ${b.querySelector('title').textContent}</li>`;
+       str += `  <li>내용: ${b.querySelector('contents').textContent}</li>`;
+       str += `  <li>작성일시: ${b.querySelector('createDt').textContent}</li>`;
+       str += '</ul>';      
+     })
+     str += '</div>';
+     str += xmlDocument.querySelector('paging').textContent;
+     
+
+     document.getElementById('board-list').innerHTML = str;
+   }
+
+      document.getElementById('btn-list').addEventListener('click', getBoardList);
+      document.getElementById('btn-list2').addEventListener('click', getBoardListXml);
+  
+  </script>
+  <hr/>
+  
+  <h4>일반 form 요소 전송</h4>
+  <form id="form-regist">
+    <label for="title">제목</label>
+    <input type="text" id="title" name="title">
+    <br/>
+    <label for="contents">내용</label>
+    <textarea id="contents" name="contents"></textarea>
+    <br/>
+    <button type="button" id="btn-regist">등록</button>
+  </form>
+  
+  <script>
+    /*
+      FormData 자바스크립트 인터페이스
+      1. <form> 태그와 내부 입력 태그들을 일련의 key/value 조합으로 생성합니다.
+      2. FormData() 생성자
+        1) new FormData()     : 비어 있는(내부 입력 태그들이 없는) <form> 태그
+        2) new FormData(form) : <form> 태그가 존재하는 경우
+      3. append() 메소드
+        1) key/value 조합의 데이터를 FormData에 추가할 때 사용합니다.
+        2) 형식 : append(key, value)
+     */
+    async function registBoard() {
+      
+      const form = document.getElementById('form-regist');
+      const option = {
+        method: 'POST',
+        body: new FormData(form) // body               : 요청 본문(body)을 이용해서 데이터를 전송합니다.
+                                 // new FormData(form) : 입력 태그들의 name 속성을 key로 사용하고, 입력 태그들에 입력된 값을 value로 사용해서 데이터를 생성합니다.
+      }
+      
+      const response = await fetch('/board/regist', option);
+      const jsonData = await response.json();
+      console.log(jsonData);
+      alert(jsonData.msg);
+      if(jsonData.status === 200)
+        getBoardList();
+    }
+    document.getElementById('btn-regist').addEventListener('click', registBoard);
+  
+  </script>
+  <hr/>
+  
+  <div>
+    <h4>단일 첨부</h4>
+    <input type="text" name="nickname" id="nickname">
+    <br/>
+    <input type="file" name="profile" id="profile">
+    <br/>
+    <button type="button" id="btn-singleupload">첨부하기</button>
+  </div>
+  
+  <script>
+    async function singleUpload() {
+      
+      const formData = new FormData();
+      formData.append('nickname', document.getElementById('nickname').value);
+      formData.append('profile', document.getElementById('profile').files[0]);
+      
+      const option = {
+          method: 'POST',
+          body: formData
+      }
+      const response = await fetch('/board/singleUpload', option);
+    }
+    document.getElementById('btn-singleupload').addEventListener('click', singleUpload);
+  </script>
+  <hr/>
+  
+  <div>
+    <h4>다중 첨부</h4>
+    <input type="text" name="notice" id="notice">
+    <br/>
+    <input type="file" name="attaches" id="attaches"multiple="multiple">
+    <br/>
+    <button type="button" id="btn-multipleupload">첨부하기</button>
+  </div>
+  
+  <script>
+    async function multipleUpload() {
+      const formData = new FormData();
+      formData.append('notice', document.getElementById('notice').value); // formData 객체에 notice라는 키와 해당 값을 추가합니다.
+                                                                          // 이 값은 HTML 문서 내에서 id="notice"인 요소의 값을 가져옵니다.
+      for(const attach of document.getElementById('attaches').files) {    // 파일 선택 input 요소를 찾습니다. 이 요소에서 선택된 파일들을 files속성을 통해 가져와서 배열 형태로 제공됩니다.
+        formData.append('attaches', attach);                              // attach는 반복문을 통해 가져온 개별 파일입니다.  이 파일을 attaches라는 이름으로 FormData 객체에 추가합니다. 
+      }
+
+      const option = {
+          method: 'POST',
+          body: formData
+      }
+      const response = await fetch('/board/multipleUpload', option);  
+    }
+    document.getElementById('btn-multipleupload').addEventListener('click', multipleUpload);
+  </script> 
+  <hr/>
+  <h4>JSON 데이터 보내기</h4>
+  <div>
+    <input type="text" name="email" id="email">
+    <br/>
+    <input type="text" name="tel" id="tel">
+    <br/>
+    <input type="text" name="addr" id="addr">
+    <button type="button" id="btn-add">추가</button>
+    <br/>    
+  </div>
+  
+  <script>
+    async function addUser() {
+      
+      // 서버로 보내고자 하는 자바스크립트 객체
+      const user = {
+        email: document.getElementById('email').value,    
+        tel: document.getElementById('tel').value,    
+        addr: document.getElementById('addr').value  
+      }
+      
+      // 비동기 요청을 위한 option 객체
+      const option = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json' // 서버로 보내는 데이터의 타입을 JSON 으로 명시해야 합니다.
+        },                                   // 명시하지 않으면 JSON.stringify()의 결과 타입인 text/plain 타입으로 인식합니다. 
+        body: JSON.stringify(user) // 자바스크립트 객체를 JSON 문자열로 변환하여 서버로 전송합니다.
+      }
+      
+      // 비동기 요청
+      const response = await fetch('/board/addUser', option);
+    }
+    
+    document.getElementById('btn-add').addEventListener('click', addUser);
+  </script>
+  
+  
+</body>
+</html>

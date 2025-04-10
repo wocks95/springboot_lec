@@ -1,0 +1,102 @@
+Day01 Springboot
+1. 무엇을 배우게 될까?
+   jdbc-x     |   jsp-x
+   orm - jpa  |   tuymeleaf - o
+   ajax       |   react.js - js library
+   mybatis - o
+
+  데이터베이스 기반 기술 중 mybatis 와  orm-jpa를 배울 것이고 jdbc는 배우지 않는다.
+  jsp는 안 배우고 thymeleaf라는 네츄럴 템플릿을 배울 예정입니다.
+  react.js-js library도 배웁니다. 
+  ajax(비동기통신기술), 
+  cj/cd - git action / jenkins (배울 예정이고 확정은 아닙니다.)
+
+* Spring Legacy Project (Spring MVC Project)
+  - jdk-11
+  - sts3
+  - tomcat9.0
+
+* Spring Boot Project
+  - jdk-17
+  - sts4
+  - 내장 톰캣(버전 10 이상 : 패키지 javax 대신 jakarta 사용)
+-------------------------------------------------------------------------------------
+* Spring Boot Project 특징
+  - 기존 기술(JSP/Servlet, EJB 등)의 복잡함을 해결한 경량 프레임워크인 스프링 프레임워크가 등장
+  - 스프링 프레임워크는 각종 XML 파일을 이용한 환경 설정이 필요
+  - 스프링 부트는 이러한 환경 설정을 더 간단한 방식으로 처리할 수 있도록 해 줌
+    application.properties (application.yaml, application.yml 도 가능) 프로퍼티 파일로 대부분의 환경 설정을 해결할 수 있음
+  - 스프링 부트는 대부분의 XML 파일을 지원하지 않음 (web.xml, root-context.xml, servlet-context.xml 등 모두 존재하지 않음)
+  - 내장 톰캣을 사용하기 때문에 간편하게 배포할 수 있음 (war 가아님 jar 로 배포 가능)
+  - JSP를 지원하지 않음 (Thymeleaf 템플릿 엔진 활용한 html 사용)
+  - 스프링 부트 디펜던시를 제공함 (기존 디펜던시들을 모아 놓은 디펜던시)
+-------------------------------------------------------------------------------------
+* Spring Boot Starter Dependency
+1. Spring Web
+    ㄴspring-boot-starter-web
+       ㄴspring-boot-starter (spring-core, logback, slf4f-api, spring-boot)
+       ㄴspring-boot-starter-json (jackson-databind)
+       ㄴspring-webmvc (spring-aop, spring-context)
+    ㄴspring-boot-starter-tomcat (내장 톰캣)
+    ㄴspring-boot-start-test (junit-jupiter, assertj-core, spring-bot-test)
+2. Lombok
+3. MySQL Deiver
+4. MYBatis Framework
+5. Thymeleaf
+6. Spring Boot DevTools
+-------------------------------------------------------------------------------------
+* 스프링부트 프로젝트 디렉터리에 무엇이 들어가는가
+  - src/main/resources > 
+     static <- assets  image,css,js ....
+     templates <- html  
+-------------------------------------------------------------------------------------
+*DDL(Data Definition Lamguage) - 테이블이나 컬럼 등을 생성, 수정, 삭제한다.
+ 데이터 정의어란?
+ 데이터베이스를 정의하는 언어이며, 데이터를 생성,수정,삭제하는 등의 데이터의 전체의 골격을 결정하는 역할을 하는 언어
+ - create   : 데이터베이스, 테이블등을 생성
+ - alter    : 테이블을 수정
+ - drop     : 데이테베이스, 테이블을 삭제
+ - truncate : 테이블을 초기화
+ ※ SCHEMA, DOMAIN, TABLE, VIEW, INDEX를 정의하거나 변경 또는 삭제할 때 사용하는 언어
+ ※ 데이터 베이스 관리자나 데이터베이스 설계자가 사용함
+
+*DML(Data Manipulation Language) 데이터베이스 테이블의 데이터를 조작한다.
+ 데이터 조작어란?
+ 정의된 데이터베이스에 입력된 레코드를 조회하거나 수정하거나 삭제하는 등의 역할을 하는 언어
+ - select : 데이터 조회
+ - insert : 데이터 삽입
+ - update : 데이터 수정
+ - delete : 데이터 삭제
+
+ ※ 데이터베이스 사용자가 응용 프로그램이나 질의어를  통하여 저장된 데이터를 실질적으로 처리하는데 사용하는 언어
+ ※ 데이터베이스 사용자와 데이터베이스 관리 시스템 가느이 인터페이스를 제공
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

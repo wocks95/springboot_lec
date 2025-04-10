@@ -1,0 +1,44 @@
+Day02.springboot controller
+-dao 가 없고 대신에 mapper가 있음
+-Day01에 배운 IBoardMapper 인터페이스에서 작업한 코드를 분리해서 작업함
+-xml 파일을 따로 분리하여 코드 작성함
+--분석하기--
+<insert id="insertBoard" useGeneratedKeys="true" keyProperty="boardId">
+    INSERT INTO tbl_board (title, contents, create_dt)
+    VALUE(null, #{title}, #{contents}, NOW())
+  </insert>
+
+*useGeneratedKeys="true" , keyProperty
+ - 항상 이 두개는 함께 사용한다.
+ - insert한 auto_incerment가 걸린 pk값을 바로 사용하고 싶을때 사용한다.
+-----------------------------
+controller 작성(실습)
+* 목록 : /list.do
+	 > list.html
+* 상세 : /detail.do?boardId=1
+         > detail.html
+* 삽입 : /regist.do | post
+	 > list.html
+* 수정 : /modify.do | post
+	 > detail.html
+* 삭제 : /remove.do
+	 > list.html
+------------------------------
+--분석하기--
+@Test
+  void 상세_보기_테스트() throws Exception {
+    MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/detail.do").param("boardId", "1"))   // /detail.do 요청을 실시합니다.
+                                 .andDo(MockMvcResultHandlers.print())             // 요청과 응답 결과를 화면에 출력합니다.
+                                 .andExpect(MockMvcResultMatchers.status().isOk()) // 응답 코드가 200(OK)이면 통과입니다.
+                                 .andReturn();       
+    
+    ModelAndView mav = mvcResult.getModelAndView();
+    System.out.println(mav.getViewName());
+    System.out.println(mav.getModelMap().get("board"));
+  }
+
+* MockMvc
+ - MockMvc를 사용하면 api요청/응답을 테스트 로그에서 볼 수 있고, 각 요청이 처리되는 과정에서 생기는 debug level log를 확인할 수 있어 버그 추적에 용이하다.
+ - 응답값은 MvcResult 객체에 담아야함
+ - Assertion 없이 MockMvc perform 메서드 호출만으로 응답 status을 테스트할 수 있음
+ 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--/* 타임리프의 th 속성 사용을 위한 네임스페이스 */-->
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<!--/* <head> 태그를 조각(fragment)으로 만들기 */-->
+<head th:fragment="head-frag(title)">
+<meta charset="UTF-8">
+<title th:text="${title}"></title>
+
+<!--/* 정적자원 확인하기 */-->
+<link rel="stylesheet" href="/static/css/home1.css">
+
+<!--/* th 속성을 이용한 정적 자원 확인하기 */-->
+<link rel="stylesheet" th:href="@{/static/css/home2.css}">
+</head>
+
+<body>
+
+  <!--/* 정적자원 확인하기 */-->
+  <img src="/static/images/robin_board.jpg" class="board"> <!--/* 주소 */-->
+
+
+  <!--/* th 속성을 이용한 정적 자원 확인하기 */-->
+  <img th:src="@{/static/images/robin_board.jpg}" class="board">
+  
+  <hr>
+  
+  <a th:href="@{/list.do}">게시판</a>
+  
+  <!--/* <footer> 태그를 조각으로 만들기 */-->
+  <footer th:fragment="footer-frag">
+    &copy; MyHome. All Rights Reserved. 
+  </footer>
+  
+</body>
+</html>
+

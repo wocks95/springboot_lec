@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<!--/* home.html 의 head-frag 조각을 가져와서 <head> 태그를 바꾸기(replace), title 전달하기 */-->
+<head th:replace="~{home::head-frag('게시글목록')}"></head>
+<body>
+  <!--/* 문자열은 작은 따옴표로 묶고, 문자열과 Value Expression 은 + 기호로 연결합니다. */-->
+  <div th:text="'전체 게시글 개수 ' + ${count} + '개'"></div>
+ 
+  <!--/* 텍스트 데이터를 파이프(|)로 묶어주면 문자열의 작은 따옴표와 연결 연산자 + 를 생략할 수 있습니다. */--> 
+  <div th:text="|전체 게시글 개수 ${count}개|"></div>
+  
+  <div>
+    <a th:href="@{/list.do?page=1&sort=DESC}">최신순</a>
+    <a th:href="@{/list.do?page=1&sort=ASC}">과거순</a>
+  </div>
+  
+  <div>
+    <a th:href="@{/list.do?display=20}">20개보기</a>
+    <a th:href="@{/list.do?display=50}">50개보기</a>
+  </div>
+ 
+  <!--/* HTML 마크업 요소가 포함된 텍스트는 th:utext 속성으로 나타냅니다. */-->
+  <div th:utext="${paging}"></div>
+  
+  <!--/* 리스트가 비어 있는 경우 */-->
+  <div th:if="${#lists.isEmpty(boardList)}">
+     작성된 게시글이 없습니다.
+  </div>
+  
+  <!--/* 리스트가 비어 있지 않은 경우 */-->
+  <div th:unless="${#lists.isEmpty(boardList)}">
+    <div th:each="b, rowStat:${boardList}">
+      <span th:text="${offset + rowStat.count}"></span>
+      <!--/* 경로 표기법 @{} 작성 시 경로와 요청 파라미터는 괄호()로 구분하여 작성합니다. */-->
+      <a th:href="@{/detail.do(boardId=${b.boardId})}" th:text="${b.title}"></a>
+      <span th:text="${#dates.format(b.createDt, 'yyyy-MM-dd')}"></span>
+    </div>
+  </div>
+  
+  <a th:href="@{/write.do}">게시글 작성</a>
+  
+  <!--/* home.html 의 footer-frag 조각을 가져와서 <div> 태그에 넣기(insert) */-->
+  <div th:insert="~{home :: footer-frag}">
+  
+  </div>
+  
+  <!--/* 자바스크립트 인라인 사용 */-->
+  <script th:inline="javascript">
+    
+    function msgHandle() {
+     const msg = /*[[${msg}]]*/ null;
+     if(msg !=null)
+       alert(msg);
+      
+    }
+    msgHandle();
+  </script>
+  
+</body>
+</html>

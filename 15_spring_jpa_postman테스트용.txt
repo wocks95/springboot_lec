@@ -1,0 +1,9 @@
+
+15_spring_jpa
+-postman 테스트-
+{
+    "menuName" : "",
+    "menuPrice" : ,
+    "categoryCode" : ,
+    "orderableStatus" : ""
+}

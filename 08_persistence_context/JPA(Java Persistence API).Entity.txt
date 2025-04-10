@@ -1,0 +1,58 @@
+2025.02.06 JPA(Java Persistence API).Entity
+
+JPA(Java Persistence API)
+1. 자바 진영의 ORM(Object Relational Mapping) 기술 표준입니다.
+2. ORM 기술을 사용하기 위한 표준 인터페이스의 모음입니다.
+   * ORM 
+   객체관계매핑. 객체와 관계형데이터베이스를 중간에서 매핑하는 기술.
+3. JPA 2.1 기준 표준 명세를 구현한 구현체들(Hibernate, EclipseLink 등)
+   활용을 위해서 Hibernate가 필요합니다.
+4. JPA 특징
+   1) 영속성 컨텍스트(Persistence Context)가 엔티티(Entity)를 생명주기에
+      맞게 관리합니다.
+   2) JPQL 을 지원합니다.
+   3) Native Query 를 지원합니다.
+   4) DBMS 별로 Dialect를 제공합니다.
+5. JPA 장점
+   1) 객체지향과 관계지향이라는 서로 다른 패러다임의 불일치를 해소해 줍니다.
+   2) SQL 중심이 아닌 객체지향 중심으로 개발이 가능합니다.
+   3) 개발자가 직접 SQL문을 작성할 필요가 없습니다.
+   4) 엔티티 설정이 변경되면 SQL문이 자동으로 수정되어 유지보수하기가 쉽습니다.
+   5) DBMS에 따른 SQL문을 JPA가 스스로 판단하고 작성합니다.
+6. JPA 단점
+   1) 복잡한 SQL문을 작성하기에는 적절하지 않습니다.
+   2) JPA의 이해도가 낮은 상태로 개발하면 성능 저하가 발생할 수 있습니다.
+   3) 복잡한 동적 SQL문의 경우 순수 JPA만으로는 지원이 안 되는 부분이 있습니다. (추가 라이브러리 사용)
+7. JPA 기본 동작 방식
+   JAVA Application
+    ㄴJPA
+      ㄴJDBC API  <-->  DataBase
+   엔티티(Entity)를 저장하고 관리하는 영속성 컨텍스트(Persistence Context)를 활용합니다. 
+
+8. 엔티티의 영속성 컨텍스트에서의 생명 주기
+  1) 비영속(new/transient) : 영속성 컨텍스트가 관리하지 않는 엔티티 / persist() : 비영속에서 영속상태로 바꿔줌
+  2) 영속(managed)         : 영속성 컨텍스트에 저장된 엔티티
+  3) 준영속(detached)      : 영속성 컨텍스트에 저장되었다가 분리된 엔티티 / merge() : 준영속에서 영속상태로 바꿔줌
+  4) 삭제(removed)         : 영속성 컨텍스트에서 삭제된 엔티티
+  5) 병합(merge)           : 준영속 상태인 엔티티가 다시 영속 상태로 변경된 상태
+
+9. 영속성 컨텍스트(Persistence Context)
+  1) EntityManagerFactory : EntitiyManager를 생성하기 위한 팩토리 클래스입니다. 애플리케이션 동작 시 싱글톤으로 생성해서 관리합니다.
+  2) EntityManager : 엔티티(Entity)를 저장하는 메모리상의 데이터베이스입니다. 엔티티의 조회, 저장, 수정, 삭제 등 엔티티에 관한 모든 작업을 처리합니다. 
+		     요청마다 생성하고 요청이 끝나면 소멸합니다.
+  3) Entity : 관계형 데이터베이스의 테이블과 매핑되는 자바 클래스를 의미합니다. @Entity, @Table, @Id, @Column 등의 Annotation을 활용합니다.
+  4) Persistence Context : 엔티티를 영구 저장하는 환경을 의미합니다. 엔티티 매니저에 엔티티를 저장하거나 조회하면 엔티티 매니저는 해당 엔티티를 영속성 컨텍스트에 보관해서 관리합니다.
+			   엔티티 매니저를 이용해서 영속성 컨텍스트에 접근하고 관리할 수 있습니다.
+
+
+
+
+
+
+
+
+
+
+
+
+
